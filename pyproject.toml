@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "liboqs-pwr"
-version = "0.12.0"
+version = "0.12.1"
 description = "Python bindings for liboqs, providing post-quantum public key cryptography algorithms"
 readme = "README.md"
 license = "MIT"
