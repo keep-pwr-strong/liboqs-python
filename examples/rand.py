@@ -12,7 +12,7 @@ logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler(stdout))
 
 logger.info("liboqs version: %s", oqs_version())
-logger.info("liboqs-python version: %s", oqs_python_version())
+logger.info("liboqs-pwr version: %s", oqs_python_version())
 
 oqsrand.randombytes_switch_algorithm("system")
 logger.info(

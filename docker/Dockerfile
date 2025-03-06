@@ -23,7 +23,7 @@ RUN apk add build-base linux-headers cmake ninja git
 # get all sources
 WORKDIR /opt
 RUN git clone --depth 1 --branch main https://github.com/open-quantum-safe/liboqs && \
-    git clone --depth 1 --branch main https://github.com/open-quantum-safe/liboqs-python.git 
+    git clone --depth 1 --branch main https://github.com/open-quantum-safe/liboqs-pwr.git 
 
 # build liboqs 
 WORKDIR /opt/liboqs
@@ -45,12 +45,12 @@ RUN apk update && apk upgrade && apk add python3
 
 # Only retain the binary contents in the final image
 COPY --from=intermediate /usr/local /usr/local
-COPY --from=intermediate /opt/liboqs-python /opt/liboqs-python
+COPY --from=intermediate /opt/liboqs-pwr /opt/liboqs-pwr
 
-ENV PYTHONPATH=/opt/liboqs-python
+ENV PYTHONPATH=/opt/liboqs-pwr
 
-# Install liboqs-python
-RUN cd /opt/liboqs-python && python3 setup.py install
+# Install liboqs-pwr
+RUN cd /opt/liboqs-pwr && python3 setup.py install
 
 # Enable a normal user 
 RUN addgroup -g 1000 -S oqs && adduser --uid 1000 -S oqs -G oqs 

@@ -20,10 +20,10 @@ WORKDIR /home/oqs
 # Create a Python 3 virtual environment
 RUN python3 -m venv venv
 
-# Get liboqs-python
-RUN git clone --depth 1 --branch main https://github.com/open-quantum-safe/liboqs-python.git
+# Get liboqs-pwr
+RUN git clone --depth 1 --branch main https://github.com/open-quantum-safe/liboqs-pwr.git
 
-# Install liboqs-python
+# Install liboqs-pwr
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-ENV PYTHONPATH=$PYTHONPATH:/home/oqs/liboqs-python
-RUN . venv/bin/activate && cd liboqs-python && pip install . && cd $HOME
+ENV PYTHONPATH=$PYTHONPATH:/home/oqs/liboqs-pwr
+RUN . venv/bin/activate && cd liboqs-pwr && pip install . && cd $HOME

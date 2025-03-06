@@ -5,7 +5,7 @@ import os
 import oqs
 
 # Example code testing oqs signature functionality. See more example code at
-# https://github.com/open-quantum-safe/liboqs-python/tree/main/examples
+# https://github.com/open-quantum-safe/liboqs-pwr/tree/main/examples
 
 message = "This is the message to sign".encode()
 

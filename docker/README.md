@@ -6,7 +6,7 @@ This docker image contains python3 with library support for quantum-safe crypto
 To this end, it contains [liboqs](https://github.com/open-quantum-safe/liboqs)
 as well as [OQS-OpenSSL](https://github.com/open-quantum-safe/openssl) from the
 [OpenQuantumSafe](https://openquantumsafe.org) project all wrapped up in Python
-APIs using [liboqs-python](https://github.com/open-quantum-safe/liboqs-python).
+APIs using [liboqs-pwr](https://github.com/open-quantum-safe/liboqs-pwr).
 
 ## Quick start
 
@@ -20,4 +20,4 @@ APIs using [liboqs-python](https://github.com/open-quantum-safe/liboqs-python).
 ## Further examples
 
 More samples are available at
-[liboqs-python examples](https://github.com/open-quantum-safe/liboqs-python/tree/main/examples).
+[liboqs-pwr examples](https://github.com/open-quantum-safe/liboqs-pwr/tree/main/examples).

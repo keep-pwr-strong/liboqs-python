@@ -1,6 +1,6 @@
-# liboqs-python: Python 3 bindings for liboqs
+# liboqs-pwr: Python 3 bindings for liboqs
 
-[![GitHub actions](https://github.com/open-quantum-safe/liboqs-python/actions/workflows/python_simplified.yml/badge.svg)](https://github.com/open-quantum-safe/liboqs-python/actions)
+[![GitHub actions](https://github.com/open-quantum-safe/liboqs-pwr/actions/workflows/python_simplified.yml/badge.svg)](https://github.com/open-quantum-safe/liboqs-pwr/actions)
 
 ---
 
@@ -9,13 +9,13 @@
 The **Open Quantum Safe (OQS) project** has the goal of developing and
 prototyping quantum-resistant cryptography.
 
-**liboqs-python** offers a Python 3 wrapper for the
+**liboqs-pwr** offers a Python 3 wrapper for the
 [Open Quantum Safe](https://openquantumsafe.org/)
 [liboqs](https://github.com/open-quantum-safe/liboqs/)
 C library, which is a C library for quantum-resistant cryptographic algorithms.
 
 The wrapper is written in Python 3, hence in the following it is assumed that
-you have access to a Python 3 interpreter. liboqs-python has been extensively
+you have access to a Python 3 interpreter. liboqs-pwr has been extensively
 tested on Linux, macOS and Windows platforms. Continuous integration is
 provided via GitHub actions.
 
@@ -91,11 +91,11 @@ to the installation directory, e.g., on a UNIX-like system, execute
 export OQS_INSTALL_PATH=/path/to/liboqs
 ```
 
-### Let liboqs-python install liboqs automatically
+### Let liboqs-pwr install liboqs automatically
 
-If liboqs is not detected at runtime by liboqs-python, it will be downloaded,
+If liboqs is not detected at runtime by liboqs-pwr, it will be downloaded,
 configured and installed automatically (as a shared library). This process will
-be performed only once, at runtime, i.e., when loading the liboqs-python
+be performed only once, at runtime, i.e., when loading the liboqs-pwr
 wrapper. The liboqs source directory will be automatically removed at the end
 of the process.
 
@@ -129,8 +129,8 @@ venv\Scripts\activate.bat
 Execute in a Terminal/Console/Administrator Command Prompt
 
 ```shell
-git clone --depth=1 https://github.com/open-quantum-safe/liboqs-python
-cd liboqs-python
+git clone --depth=1 https://github.com/open-quantum-safe/liboqs-pwr
+cd liboqs-pwr
 pip install .
 ```
 
@@ -139,9 +139,9 @@ pip install .
 Execute
 
 ```shell
-python3 liboqs-python/examples/kem.py
-python3 liboqs-python/examples/sig.py
-python3 liboqs-python/examples/rand.py
+python3 liboqs-pwr/examples/kem.py
+python3 liboqs-pwr/examples/sig.py
+python3 liboqs-pwr/examples/rand.py
 ```
 
 ### Run the unit test
@@ -156,13 +156,13 @@ nose2 --verbose
 
 ## Usage in standalone applications
 
-liboqs-python can be imported into Python programs with
+liboqs-pwr can be imported into Python programs with
 
 ```python
 import oqs
 ```
 
-liboqs-python defines two main classes: `KeyEncapsulation` and `Signature`,
+liboqs-pwr defines two main classes: `KeyEncapsulation` and `Signature`,
 providing post-quantum key encapsulation and signature mechanisms,
 respectively. Each must be instantiated with a string identifying one of
 mechanisms supported by liboqs; these can be enumerated using the
@@ -170,18 +170,18 @@ mechanisms supported by liboqs; these can be enumerated using the
 The files in `examples/` demonstrate the wrapper's API. Support for alternative
 RNGs is provided via the `randombytes_*()` functions.
 
-The liboqs-python project should be in the `PYTHONPATH`. To ensure this on
+The liboqs-pwr project should be in the `PYTHONPATH`. To ensure this on
 UNIX-like systems, execute
 
 ```shell
-export PYTHONPATH=$PYTHONPATH:/path/to/liboqs-python
+export PYTHONPATH=$PYTHONPATH:/path/to/liboqs-pwr
 ```
 
 or, on Windows platforms, use the "Edit the system environment variables"
 Control Panel tool or execute in a Command Prompt
 
 ```shell
-set PYTHONPATH=%PYTHONPATH%;C:\path\to\liboqs-python
+set PYTHONPATH=%PYTHONPATH%;C:\path\to\liboqs-pwr
 ```
 
 ---
@@ -189,7 +189,7 @@ set PYTHONPATH=%PYTHONPATH%;C:\path\to\liboqs-python
 ## Docker
 
 A self-explanatory minimalistic Docker file is provided in
-[`Dockerfile`](https://github.com/open-quantum-safe/liboqs-python/tree/main/Dockerfile).
+[`Dockerfile`](https://github.com/open-quantum-safe/liboqs-pwr/tree/main/Dockerfile).
 
 Build the image by executing
 
@@ -200,7 +200,7 @@ docker build -t oqs-python .
 Run, e.g., the key encapsulation example by executing
 
 ```shell
-docker run -it oqs-python sh -c ". venv/bin/activate && python liboqs-python/examples/kem.py"
+docker run -it oqs-python sh -c ". venv/bin/activate && python liboqs-pwr/examples/kem.py"
 ```
 
 Or, run the unit tests with
@@ -217,7 +217,7 @@ docker run --rm -it --workdir=/app -v ${PWD}:/app oqs-python /bin/bash
 ```
 
 A more comprehensive Docker example is provided in the directory
-[`docker`](https://github.com/open-quantum-safe/liboqs-python/tree/main/docker).
+[`docker`](https://github.com/open-quantum-safe/liboqs-pwr/tree/main/docker).
 
 ---
 
@@ -242,17 +242,17 @@ alongside traditional public key algorithms (like RSA or elliptic curves) so
 that the solution is at least no less secure than existing traditional
 cryptography.
 
-Just like liboqs, liboqs-python is provided "as is", without warranty of any
+Just like liboqs, liboqs-pwr is provided "as is", without warranty of any
 kind. See
-[LICENSE](https://github.com/open-quantum-safe/liboqs-python/blob/main/LICENSE)
+[LICENSE](https://github.com/open-quantum-safe/liboqs-pwr/blob/main/LICENSE)
 for the full disclaimer.
 
 ---
 
 ## License
 
-liboqs-python is licensed under the MIT License; see
-[LICENSE](https://github.com/open-quantum-safe/liboqs-python/blob/main/LICENSE)
+liboqs-pwr is licensed under the MIT License; see
+[LICENSE](https://github.com/open-quantum-safe/liboqs-pwr/blob/main/LICENSE)
 for details.
 
 ---
@@ -266,7 +266,7 @@ Waterloo.
 
 ### Contributors
 
-Contributors to the liboqs-python wrapper include
+Contributors to the liboqs-pwr wrapper include
 
 - Ben Davies (University of Waterloo)
 - Vlad Gheorghiu ([softwareQ Inc.](https://www.softwareq.ca) and the University

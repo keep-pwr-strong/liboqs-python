@@ -11,7 +11,7 @@ logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler(stdout))
 
 logger.info("liboqs version: %s", oqs.oqs_version())
-logger.info("liboqs-python version: %s", oqs.oqs_python_version())
+logger.info("liboqs-pwr version: %s", oqs.oqs_python_version())
 logger.info(
     "Enabled KEM mechanisms:\n%s",
     pformat(oqs.get_enabled_kem_mechanisms(), compact=True),

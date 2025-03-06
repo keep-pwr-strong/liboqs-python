@@ -1,15 +1,15 @@
 # Pre-release
 
-- Added type checking and automatic linting/formatting, https://github.com/open-quantum-safe/liboqs-python/pull/97
+- Added type checking and automatic linting/formatting, https://github.com/open-quantum-safe/liboqs-pwr/pull/97
 - Added a utility function for de-structuring version strings in `oqs.py`
   - `version(version_str: str) -> tuple[str, str, str]:` - Returns a tuple
     containing the (major, minor, patch) versions
-- A warning is issued only if the liboqs-python version's major and minor
+- A warning is issued only if the liboqs-pwr version's major and minor
   numbers differ from those of liboqs, ignoring the patch version
 
 # Version 0.12.0 - January 15, 2025
 
-- Fixes https://github.com/open-quantum-safe/liboqs-python/issues/98. The API
+- Fixes https://github.com/open-quantum-safe/liboqs-pwr/issues/98. The API
   that NIST has introduced in
   [FIPS 204](https://csrc.nist.gov/pubs/fips/204/final)
   for ML-DSA includes a context string of length >= 0. Added new API for
@@ -26,7 +26,7 @@ public_key)`
 # Version 0.10.0 - April 1, 2024
 
 - Replaced CHANGES by
-  [CHANGES.md](https://github.com/open-quantum-safe/liboqs-python/blob/main/CHANGES.md),
+  [CHANGES.md](https://github.com/open-quantum-safe/liboqs-pwr/blob/main/CHANGES.md),
   as we now use Markdown format to keep track of changes in new releases
 - Removed the NIST PRNG as the latter is no longer exposed by liboqs' public
   API
@@ -71,7 +71,7 @@ public_key)`
   can not access it directly; can be accessed via the new `oqs.native()`
   function
 - Closing
-  #7 [link](https://github.com/open-quantum-safe/liboqs-python/issues/7), all
+  #7 [link](https://github.com/open-quantum-safe/liboqs-pwr/issues/7), all
   issues addressed
 - Added AppVeyor continuous integration
 

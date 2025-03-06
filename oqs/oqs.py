@@ -40,16 +40,16 @@ OQS_ERROR: Final[int] = -1
 
 
 def oqs_python_version() -> Union[str, None]:
-    """liboqs-python version string."""
+    """liboqs-pwr version string."""
     try:
-        result = importlib.metadata.version("liboqs-python")
+        result = importlib.metadata.version("liboqs-pwr")
     except importlib.metadata.PackageNotFoundError:
-        warnings.warn("Please install liboqs-python using pip install", stacklevel=2)
+        warnings.warn("Please install liboqs-pwr using pip install", stacklevel=2)
         return None
     return result
 
 
-# liboqs-python tries to automatically install and load this liboqs version in
+# liboqs-pwr tries to automatically install and load this liboqs version in
 # case no other version is found
 OQS_VERSION = oqs_python_version()
 
@@ -242,10 +242,10 @@ oqs_ver_major, oqs_ver_minor, oqs_ver_patch = version(oqs_ver)
 oqs_python_ver = oqs_python_version()
 if oqs_python_ver:
     oqs_python_ver_major, oqs_python_ver_minor, oqs_python_ver_patch = version(oqs_python_ver)
-    # Warn the user if the liboqs version differs from liboqs-python version
+    # Warn the user if the liboqs version differs from liboqs-pwr version
     if not (oqs_ver_major == oqs_python_ver_major and oqs_ver_minor == oqs_python_ver_minor):
         warnings.warn(
-            f"liboqs version (major, minor) {oqs_version()} differs from liboqs-python version "
+            f"liboqs version (major, minor) {oqs_version()} differs from liboqs-pwr version "
             f"{oqs_python_version()}",
             stacklevel=2,
         )
